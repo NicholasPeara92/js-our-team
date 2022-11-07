@@ -39,15 +39,15 @@ const team = [
     }
 ];
 
-const member = team[i];
+const ourTeam = document.getElementById("team");
 
 for (let  i = 0; i < team.length; i++) {
     // MILESTONE 1:
     // Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
+    const member = team[i];
     console.log(member);
     // MILESTONE 2:
     // Stampare le stesse informazioni su DOM sottoforma di stringhe 
-    const ourTeam = document.getElementById("team");
     // BONUS 1:
     // Trasformare la stringa foto in una immagine effettiva
     // BONUS 2:
