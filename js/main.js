@@ -39,12 +39,12 @@ const team = [
     }
 ];
 
+const member = team[i];
 
 for (let  i = 0; i < team.length; i++) {
     // MILESTONE 1:
     // Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
-    const members = team[i];
-    console.log(members);
+    console.log(member);
     // MILESTONE 2:
     // Stampare le stesse informazioni su DOM sottoforma di stringhe 
     const ourTeam = document.getElementById("team");
@@ -52,14 +52,13 @@ for (let  i = 0; i < team.length; i++) {
     // Trasformare la stringa foto in una immagine effettiva
     // BONUS 2:
     // Organizzare i singoli membri in card/schede
-    const memberList = `
+    ourTeam.innerHTML += `
         <div class= "card">
-            <img src="img/${members.photo}" alt="">
-            <h4>${members.fullName}</h4>
-            <p>${members.role}</p>
+            <img src="img/${member.photo}" alt="">
+            <h4>${member.fullName}</h4>
+            <p>${member.role}</p>
         </div class= "card">
     `;
-    ourTeam.innerHTML += memberList;
 }
 
 
