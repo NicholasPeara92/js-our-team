@@ -14,7 +14,7 @@ h1 {
 }
 
 .container {
-    width: 1200px;
+    max-width: 1200px;
     margin: auto;
 }
 
@@ -22,7 +22,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 100%;
+    max-width: 1200px;
 }
 
 .card {
@@ -31,8 +31,32 @@ h1 {
     margin-bottom: 10px;
     padding: 30px;
     background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
 
 .card img {
     width: 100%;
+}
+
+@media screen and (max-width: 1240px) {
+    .container {
+        max-width: 800px;
+        margin: auto;
+    }
+    .card {
+        width: calc(100% / 2 - 30px);
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .container {
+        max-width: 600px;
+        margin: auto;
+    }
+    .card {
+        width: 100%;
+        margin: 10px;
+    }
 }
